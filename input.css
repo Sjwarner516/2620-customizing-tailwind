@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+@import "tailwindcss";
+@config "./tailwind.config.js";
+
+
+
+
+@theme {
+    --font-handwrite: "Barriecito", system-ui;
+
+    /*adding a breakpoint small */
+   --breakpoint-sm: 32rem; 
+
+     /*adding and removing colors */
+--color-*: initial;
+
+--color-mygreen: #1e5922;
+--color-myblue: #D0E9F2;
+--color-mypalepink: #F241C3;
+--color-myhotpink: #D91A96;
+--color-mymaroon: #A60D45;
+
+--color-mygray-0: #ffffff;
+--color-mygray-5: #f2f2f2;
+--color-mygray-10: #e5e5e5;
+--color-mygray-20: #cccccc;
+--color-mygray-30: #b3b3b3;
+--color-mygray-40: #999999;
+--color-mygray-50: #808080;
+--color-mygray-60: #666666;
+--color-mygray-70: #4d4d4d;
+--color-mygray-80: #333333;
+--color-mygray-90: #1a1a1a;
+--color-mygray-100: #000000;
+
+}
+
+
+h1 {
+    @apply px-2 pt-6 text-2xl text-myhotpink font-bold text-2xl p-2 font-handwrite;
+}
+
+h2 {
+    @apply px-2 pt-3 pb-0 text-xl text-mymaroon border-b-2 border-mygreen font-handwrite;
+}
+
+p {
+    @apply px-2 pt-2 text-mygray-80
+}
+
+img {
+
+}
+
+a :hover {
+    @apply bg-blue-300
+}
+
+
+header {
+    
+}

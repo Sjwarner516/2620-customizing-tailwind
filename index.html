@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 05</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image" href="soccerball.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="grid grid-cols-[auto_44px_44px_44px] gap-2 p-2 border-b">
+           <img src="soccerball.svg" width="90" height="90">
+            <a class="border w-11 h-11 flex justify-around rounded-full hover:bg-slate-100" href="#"><img class="w-4" src="person.svg"></a>
+            <a class="border w-11 h-11 flex justify-around rounded-full hover:bg-slate-100" href="#"><img class="w-4" src="cart3.svg" alt="cart"></a>
+            <a id="hamburgerBtn" class="border w-11 h-11 flex justify-around rounded-full hover:bg-slate-100 sm:hidden" href="#"><img class="w-4" src="SVG/Asset 1.svg" alt="hamburgericon"></a>
+    </header>
+
+   <nav id="primaryNav" class="bg-mymaroon hidden sm:px-2 sm:block">
+    <ul class="flex flex-col sm:flex-row">
+      <li class="border-b border-myhotpink sm:border-b-0">
+        <a href="#font" class="block py-2 px-3 text-mygreen hover:bg-myblue">Font Family</a></li>
+      <li class="border-b border-myhotpink sm:border-b-0">
+        <a href="#breakOver" class="block py-2 px-3 text-mygreen hover:bg-myblue">Breakpoint Overrides</a></li>
+      <li class="border-b border-myhotpink sm:border-b-0">
+        <a href="#colorOver" class="block py-2 px-3 text-mygreen hover:bg-myblue">Color Overrides</a></li>  
+   </ul>
+</nav> 
+   
+
+    <h2 id="fontFam" class="font-handwrite text-xl"> Font Family Overrides</h2>
+    <p>Tailwind comes with 3 built in font families (sans, serfi & mono)</p>
+    <img src="existingclasses.png">
+    <p>We can add additional fonts via Google Fonts using a link in the head of our HTML</p>
+    <img src="gfontshtml.png">
+    <p>I then had to use theme in the css to name the new font</p>
+    <img src="thefont.png">
+    <p>In the HTML you use the new font by adding it to the class using the variable name created in css</p>
+    <img src="usingnewfont.png">
+    <p class="font-handwrite">When rendered correctly it will show up like this!</p>
+
+
+
+    <h2 id="breakOver">Breakpoint Overrides</h2>
+    <p>Tailwind comes with 5 media query breakpoints</p>
+    <img src="breakpoints.png">
+    <p>You can override these by adding to the source.css file. here i am changing the small from 40rem to 32rem.</p>
+    <img src="breakpoint.png">
+
+    <h2 id="colorOver">Color Overrides</h2>
+    <p>Tailwind comes with a LOT of default colors. If we are working with a design team and they want a specific set of colors we can add them to our tailwind set up so they are named and easy to use. Here is the color palette for my site.</p>
+    <img src="colors.png">
+    <p>It's also helpful to have a set of gray colors ready to go to compliment the main color scheme. Here is my series of grays including black and white. I've added them to my css file like this:</p>
+    <img src="gray.png">
+<style>
+  :root {
+    --color-mygreen: #1e5922;
+    --color-myblue: #D0E9F2;
+    --color-mypalepink: #F241C3;
+    --color-myhotpink: #D91A96;
+    --color-mymaroon: #A60D45;
+
+    --color-mygray-0: #ffffff;
+    --color-mygray-5: #f2f2f2;
+    --color-mygray-10: #e5e5e5;
+    --color-mygray-20: #cccccc;
+    --color-mygray-30: #b3b3b3;
+    --color-mygray-40: #999999;
+    --color-mygray-50: #808080;
+    --color-mygray-60: #666666;
+    --color-mygray-70: #4d4d4d;
+    --color-mygray-80: #333333;
+    --color-mygray-90: #1a1a1a;
+    --color-mygray-100: #000000;
+  }
+
+
+
+  .color-item {
+    display: contents; /* allows the two children to fill the grid columns */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 40px;
+  }
+
+  .color-box {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .color-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: monospace;
+  }
+
+  .color-name {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .color-value {
+    color: #666;
+    font-size: 0.9em;
+  }
+
+
+</style>
+
+    
+
+<h2>Main Colors</h2>
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygreen)"></div>
+  <div class="color-info"><span class="color-name">mygreen</span><span class="color-value">#1e5922</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-myblue)"></div>
+  <div class="color-info"><span class="color-name">myblue</span><span class="color-value">#D0E9F2</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mypalepink)"></div>
+  <div class="color-info"><span class="color-name">mypalepink</span><span class="color-value">#F241C3</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-myhotpink)"></div>
+  <div class="color-info"><span class="color-name">myhotpink</span><span class="color-value">#D91A96</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mymaroon)"></div>
+  <div class="color-info"><span class="color-name">mymaroon</span><span class="color-value">#A60D45</span></div>
+</div>
+
+<h2>Gray Scale</h2>
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-0)"></div>
+  <div class="color-info"><span class="color-name">mygray-0</span><span class="color-value">#ffffff</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-5)"></div>
+  <div class="color-info"><span class="color-name">mygray-5</span><span class="color-value">#f2f2f2</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-10)"></div>
+  <div class="color-info"><span class="color-name">mygray-10</span><span class="color-value">#e5e5e5</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-20)"></div>
+  <div class="color-info"><span class="color-name">mygray-20</span><span class="color-value">#cccccc</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-30)"></div>
+  <div class="color-info"><span class="color-name">mygray-30</span><span class="color-value">#b3b3b3</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-40)"></div>
+  <div class="color-info"><span class="color-name">mygray-40</span><span class="color-value">#999999</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-50)"></div>
+  <div class="color-info"><span class="color-name">mygray-50</span><span class="color-value">#808080</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-60)"></div>
+  <div class="color-info"><span class="color-name">mygray-60</span><span class="color-value">#666666</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-70)"></div>
+  <div class="color-info"><span class="color-name">mygray-70</span><span class="color-value">#4d4d4d</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-80)"></div>
+  <div class="color-info"><span class="color-name">mygray-80</span><span class="color-value">#333333</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-90)"></div>
+  <div class="color-info"><span class="color-name">mygray-90</span><span class="color-value">#1a1a1a</span></div>
+</div>
+
+<div class="color-item">
+  <div class="color-box" style="background: var(--color-mygray-100)"></div>
+  <div class="color-info"><span class="color-name">mygray-100</span><span class="color-value">#000000</span></div>
+</div>
+<script src="scripts.js" type="module"></script>
+<script src="navigation.js" type="module"></script>
+</body>
+
+<footer>
+  <p class="text-center text-sm text-myhotpink">
+    &copy; Sydni Warner &bull; DWDD 2620
+  </p>
+</footer>
+
+ 
+</html>
