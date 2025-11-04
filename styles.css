@@ -9,7 +9,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
     --spacing: 0.25rem;
-    --container-6xl: 72rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-xl: 1.25rem;
@@ -17,8 +16,6 @@
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-bold: 700;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-handwrite: "Barriecito", system-ui;
@@ -190,9 +187,6 @@
   }
 }
 @layer utilities {
-  .mx-auto {
-    margin-inline: auto;
-  }
   .block {
     display: block;
   }
@@ -216,9 +210,6 @@
   }
   .w-11 {
     width: calc(var(--spacing) * 11);
-  }
-  .max-w-6xl {
-    max-width: var(--container-6xl);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -330,11 +321,6 @@
       padding-inline: calc(var(--spacing) * 2);
     }
   }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
-    }
-  }
 }
 h1 {
   padding: calc(var(--spacing) * 2);
@@ -364,9 +350,8 @@ p {
   padding-top: calc(var(--spacing) * 2);
   color: var(--color-mygray-80);
 }
-img {
-  position: relative;
-  width: 100%;
+a :hover {
+  background-color: var(--color-myblue);
 }
 @property --tw-rotate-x {
   syntax: "*";

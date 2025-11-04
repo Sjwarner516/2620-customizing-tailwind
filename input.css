@@ -49,15 +49,11 @@ p {
     @apply px-2 pt-2 text-mygray-80
 }
 
-img {
 
-}
 
 a :hover {
-    @apply bg-blue-300
+    @apply bg-myblue
 }
 
 
-header {
-    
-}
+
